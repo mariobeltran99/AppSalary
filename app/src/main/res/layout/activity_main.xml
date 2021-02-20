@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingTop="240dp"
+    android:paddingBottom="100dp"
+    android:paddingRight="40dp"
+    android:layout_centerVertical="true"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_name"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        android:gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/etsalary"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_salary"
+        android:textColorHint="@color/black"
+        android:inputType="numberDecimal"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/ethour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/hint_horas"
+        android:textColorHint="@color/black"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btncal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/teal_700"
+        android:gravity="center"
+        android:onClick="executeAmount"
+        android:text="@string/btn_name"
+        android:textAlignment="center" />
+
+</LinearLayout>

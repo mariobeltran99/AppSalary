@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Aplicación de Salario</string>
+    <string name="hint_name">Ingrese su nombre</string>
+    <string name="hint_salary">Ingrese su sueldo</string>
+    <string name="hint_horas">Ingrese los años trabajados</string>
+    <string name="btn_name">Calcular Aumentos</string>
+    <string name="hint_det">Detalles del Aumento de Salario</string>
+    <string name="btn_final">Regresar</string>
+
+</resources>
