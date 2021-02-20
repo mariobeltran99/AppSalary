@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -13,16 +14,48 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     private EditText named, salary, anti;
+    private Button reger;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         configView();
+        validateComponents();
     }
     private void configView(){
         named = findViewById(R.id.etname);
         salary = findViewById(R.id.etsalary);
         anti = findViewById(R.id.ethour);
+        reger = findViewById(R.id.btncal);
+    }
+    private void validateComponents(){
+        named.setOnFocusChangeListener((v, hasFocus) -> {
+            if(named.getText().toString().trim().isEmpty()){
+                named.setError("Campo Vacío");
+                reger.setClickable(false);
+                return;
+            }else{
+                reger.setClickable(true);
+            }
+        });
+        salary.setOnFocusChangeListener((v, hasFocus) -> {
+            if(salary.getText().length() == 0){
+                salary.setError("Campo Vacío");
+                reger.setClickable(false);
+                return;
+            }else{
+                reger.setClickable(true);
+            }
+        });
+        anti.setOnFocusChangeListener((v, hasFocus) -> {
+            if(anti.getText().length() == 0){
+                anti.setError("Campo Vacío");
+                reger.setClickable(false);
+                return;
+            }else{
+                reger.setClickable(true);
+            }
+        });
     }
     public void executeAmount(View v){
         Double salar = Double.valueOf(salary.getText().toString());
